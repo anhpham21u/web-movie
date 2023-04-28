@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar.js";
 import Banner from "./Banner.js";
 import OriginalList from "./OriginalList.js";
+import ListType from "./ListType.js";
 
 const API_KEY = "8014da7ed20c5eeb085b2e91972368e3";
 
@@ -38,6 +39,8 @@ function Browse() {
     });
   }, []);
 
+  console.log(dataAPI);
+
   return (
     <>
       {isLoading === false && (
@@ -45,7 +48,16 @@ function Browse() {
           <Banner data={dataAPI.Trending}>
             <Navbar />
           </Banner>
-          <OriginalList data={dataAPI.Originals} />
+          <div className="bg-dark">
+            <OriginalList data={dataAPI.Originals} />
+            <ListType data={dataAPI.Trending} />
+            <ListType data={dataAPI.TopRated} />
+            <ListType data={dataAPI.ActionMovies} />
+            <ListType data={dataAPI.ComedyMovies} />
+            <ListType data={dataAPI.HorrorMovies} />
+            <ListType data={dataAPI.RomanceMovies} />
+            <ListType data={dataAPI.Documentaries} />
+          </div>
         </>
       )}
     </>

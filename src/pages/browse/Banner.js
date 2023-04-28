@@ -14,18 +14,16 @@ function Banner(props) {
         })`,
       }}
     >
-      <div className="flex flex--justify-center">
-        <div className="container">
-          {props.children}
-          <h1>{mainBanner.original_title}</h1>
-          <button className={styles.btnBanner + " mx-5"} href="#">
-            Play
-          </button>
-          <button className={styles.btnBanner} href="#">
-            MyList
-          </button>
-          <p className={styles.bannerOverview}>{mainBanner.overview}</p>
-        </div>
+      <div className="container">
+        {props.children}
+        <h1>{mainBanner.original_title}</h1>
+        <button className={styles.btnBanner + " mx-5"} href="#">
+          Play
+        </button>
+        <button className={styles.btnBanner} href="#">
+          MyList
+        </button>
+        <p className={styles.bannerOverview}>{mainBanner.overview}</p>
       </div>
     </div>
   );
