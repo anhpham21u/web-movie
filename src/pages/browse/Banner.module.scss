@@ -1,0 +1,23 @@
+.banner {
+    height: 65vh;
+    background-size: cover;
+    color: #fff;
+}
+
+.btnBanner {
+    background-color: #00000057;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #0000009c;
+    }
+}
+
+.bannerOverview {
+    width: 40%;
+    font-size: 13.5px;
+}
