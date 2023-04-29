@@ -39,8 +39,6 @@ function Browse() {
     });
   }, []);
 
-  console.log(dataAPI);
-
   return (
     <>
       {isLoading === false && (
@@ -50,13 +48,13 @@ function Browse() {
           </Banner>
           <div className="bg-dark">
             <OriginalList data={dataAPI.Originals} />
-            <ListType data={dataAPI.Trending} />
-            <ListType data={dataAPI.TopRated} />
-            <ListType data={dataAPI.ActionMovies} />
-            <ListType data={dataAPI.ComedyMovies} />
-            <ListType data={dataAPI.HorrorMovies} />
-            <ListType data={dataAPI.RomanceMovies} />
-            <ListType data={dataAPI.Documentaries} />
+            <ListType data={dataAPI.Trending} id="Trending" />
+            <ListType data={dataAPI.TopRated} id="TopRated" />
+            <ListType data={dataAPI.ActionMovies} id="ActionMovies" />
+            <ListType data={dataAPI.ComedyMovies} id="ComedyMovies" />
+            <ListType data={dataAPI.HorrorMovies} id="HorrorMovies" />
+            <ListType data={dataAPI.RomanceMovies} id="RomanceMovies" />
+            <ListType data={dataAPI.Documentaries} id="Documentaries" />
           </div>
         </>
       )}
