@@ -1,0 +1,14 @@
+.listType {
+    overflow-x: scroll;
+    padding-bottom: 10px;
+
+    &::-webkit-scrollbar {
+        background-color: #11171a;
+        height: 7px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #292929;
+        border-radius: 10px;
+    }
+}

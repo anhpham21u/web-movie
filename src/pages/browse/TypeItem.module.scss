@@ -4,4 +4,12 @@
 
     background-size: cover;
     flex-shrink: 0;
+
+    margin-right: 10px;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        transition: transform 0.3s ease-in-out; // lam` muot chuyen dong. 
+    }
 }

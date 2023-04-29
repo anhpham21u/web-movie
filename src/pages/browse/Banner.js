@@ -14,10 +14,12 @@ function Banner(props) {
         })`,
       }}
     >
+      {props.children}
+      <div style={{ height: "130px" }}></div>
+
       <div className="container">
-        {props.children}
-        <h1>{mainBanner.original_title}</h1>
-        <button className={styles.btnBanner + " mx-5"} href="#">
+        <h1 className="mb-10">{mainBanner.original_title}</h1>
+        <button className={styles.btnBanner + " mx-5 mb-10"} href="#">
           Play
         </button>
         <button className={styles.btnBanner} href="#">

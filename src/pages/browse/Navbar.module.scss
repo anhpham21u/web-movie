@@ -1,3 +1,11 @@
 .homeBtn {
     color: #ff0000;
 }
+
+.navBar {
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    transition: background-color 0.5s ease-in-out;
+}
