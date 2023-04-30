@@ -32,12 +32,32 @@
     margin-right: auto;
 }
 
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.hidden {
+    display: none;
+}
+
 .bg-dark {
     background-color: #111111;
 }
 
 .cursor {
     cursor: pointer;
+}
+
+.p-30 {
+    padding: 30px;
 }
 
 .pb-30 {

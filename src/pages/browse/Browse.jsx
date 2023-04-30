@@ -3,8 +3,11 @@ import Navbar from "./Navbar.js";
 import Banner from "./Banner.js";
 import OriginalList from "./OriginalList.js";
 import ListType from "./ListType.js";
+import Modal from "./Modal.js";
 
 const API_KEY = "8014da7ed20c5eeb085b2e91972368e3";
+
+const MyContext = React.createContext();
 
 function Browse() {
   const [dataAPI, setData] = useState({});
@@ -22,6 +25,9 @@ function Browse() {
   ];
   const headLink = "https://api.themoviedb.org/3";
   let cnt = 0;
+
+  const [showModal, setShowModal] = useState(false);
+  const [dataModal, setDataModal] = useState({});
 
   useEffect(() => {
     type.forEach((item) => {
@@ -47,14 +53,19 @@ function Browse() {
             <Navbar />
           </Banner>
           <div className="bg-dark">
-            <OriginalList data={dataAPI.Originals} />
-            <ListType data={dataAPI.Trending} id="Trending" />
-            <ListType data={dataAPI.TopRated} id="TopRated" />
-            <ListType data={dataAPI.ActionMovies} id="ActionMovies" />
-            <ListType data={dataAPI.ComedyMovies} id="ComedyMovies" />
-            <ListType data={dataAPI.HorrorMovies} id="HorrorMovies" />
-            <ListType data={dataAPI.RomanceMovies} id="RomanceMovies" />
-            <ListType data={dataAPI.Documentaries} id="Documentaries" />
+            <MyContext.Provider
+              value={{ showModal, setShowModal, dataModal, setDataModal }}
+            >
+              <OriginalList data={dataAPI.Originals} />
+              <ListType data={dataAPI.Trending} id="Trending" />
+              <ListType data={dataAPI.TopRated} id="TopRated" />
+              <ListType data={dataAPI.ActionMovies} id="ActionMovies" />
+              <ListType data={dataAPI.ComedyMovies} id="ComedyMovies" />
+              <ListType data={dataAPI.HorrorMovies} id="HorrorMovies" />
+              <ListType data={dataAPI.RomanceMovies} id="RomanceMovies" />
+              <ListType data={dataAPI.Documentaries} id="Documentaries" />
+              <Modal data={dataModal} />
+            </MyContext.Provider>
           </div>
         </>
       )}
@@ -62,4 +73,5 @@ function Browse() {
   );
 }
 
+export { MyContext };
 export default Browse;
