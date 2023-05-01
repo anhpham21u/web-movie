@@ -8,9 +8,7 @@ function TypeItem({ data }) {
   const { showModal, setShowModal, dataModal, setDataModal } =
     React.useContext(MyContext);
 
-  console.log(showModal);
-
-  const handlerClick = () => {
+  const handleClick = () => {
     setDataModal(data);
     setShowModal(true);
   };
@@ -19,7 +17,7 @@ function TypeItem({ data }) {
     <div
       className={styles.typeItem}
       style={{ backgroundImage: `url(${headLink + data.backdrop_path})` }}
-      onClick={handlerClick}
+      onClick={handleClick}
     ></div>
   );
 }
