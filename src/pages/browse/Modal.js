@@ -1,7 +1,7 @@
 import React from "react";
 import { createPortal } from "react-dom";
 import styles from "./Modal.module.scss";
-import { MyContext } from "./Browse";
+import { MyContext } from "./../../App.js";
 
 // modal
 let modalRoot = document.getElementById("modal-root");

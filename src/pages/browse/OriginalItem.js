@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./OriginalItem.module.scss";
-import { MyContext } from "./Browse";
+import { MyContext } from "./../../App.js";
 
 function OriginalItem({ data }) {
   const headLink = "https://image.tmdb.org/t/p/original";

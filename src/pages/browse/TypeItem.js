@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./TypeItem.module.scss";
-import { MyContext } from "./Browse";
+import { MyContext } from "./../../App.js";
 
 function TypeItem({ data }) {
   const headLink = "https://image.tmdb.org/t/p/original";

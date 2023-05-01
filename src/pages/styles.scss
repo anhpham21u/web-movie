@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    // box-sizing: border-box;
 }
 
 .flex {
@@ -21,6 +21,10 @@
 
     &--wrap {
         flex-wrap: wrap;
+    }
+
+    &--justify-end {
+        justify-content: flex-end;
     }
 }
 
@@ -56,16 +60,20 @@
     cursor: pointer;
 }
 
+.p-10 {
+    padding: 10px;
+}
+
+.p-15 {
+    padding: 15px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
 .p-30 {
     padding: 30px;
-}
-
-.pb-30 {
-    padding-bottom: 30px;
-}
-
-.pb-50 {
-    padding-bottom: 50px;
 }
 
 .py-30 {
@@ -78,9 +86,22 @@
     padding-bottom: 50px;
 }
 
+.pb-30 {
+    padding-bottom: 30px;
+}
+
+.pb-50 {
+    padding-bottom: 50px;
+}
+
 .mx-5 {
     margin-left: 5px;
     margin-right: 5px;
+}
+
+.mx-10 {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .mb-5 {

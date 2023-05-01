@@ -32,7 +32,7 @@ function Navbar() {
         <h2
           className={styles.homeBtn + " cursor"}
           onClick={() => {
-            window.location.replace("");
+            window.location.replace("./");
           }}
         >
           Movie App
